@@ -24,3 +24,5 @@ vendor/
 !.env.example
 /.ignore
 /software
+/src/frontend/.next/cache
+/src/frontend/.next
