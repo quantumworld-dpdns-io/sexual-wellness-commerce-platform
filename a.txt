@@ -1,0 +1,6 @@
+ 1.expand '/Users/dennis_leedennis_lee/Documents/GitHub/anonymous-adult-market-research-panel/README.md' based on my purpose of this repo Anonymous
+  Adult Market Research Panel: Allows verified adults to participate in studies via ZK age proofs and anonymous credentials. and 2. add a              
+  structure/tech stask section in '/Users/dennis_leedennis_lee/Documents/GitHub/anonymous-adult-market-research-panel/README.md' (fe  next.js, be    
+  go+rust+python+qasm microservices, db supabase )and use suitable tools from
+  '/Users/dennis_leedennis_lee/Documents/GitHub/anonymous-adult-market-research-panel/.ignore/software-tools', then three, make extremely detailed
+  implementations plans in '/Users/dennis_leedennis_lee/Documents/GitHub/anonymous-adult-market-research-panel/docs/dev-docs'
