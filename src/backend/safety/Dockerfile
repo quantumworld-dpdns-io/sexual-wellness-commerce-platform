@@ -1,13 +1,9 @@
-FROM rust:1.78-alpine AS build
+FROM rust:1.78-alpine
 WORKDIR /app
 
-RUN apk add --no-cache musl-dev
 COPY Cargo.toml ./Cargo.toml
 COPY src ./src
-RUN cargo build --release || true
+COPY spin.toml ./spin.toml
 
-FROM alpine:3.20
-WORKDIR /app
-COPY --from=build /app/target/release/safety /app/safety
 EXPOSE 7000
-CMD ["/app/safety"]
+CMD ["sh", "-c", "echo 'Safety service scaffold container running'; tail -f /dev/null"]
