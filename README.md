@@ -28,9 +28,15 @@ This platform serves as a secure bridge between wellness providers and consumers
 - **Security**: Post-Quantum Cryptography (**PQC Libraries**) and **Cilium Tetragon** for runtime security.
 
 ### Tools & Protocols
-
 - **Commerce**: **Google Universal Commerce Protocol (UCP)** for interoperable marketplace logic.
 - **Observability**: **OpenTelemetry** and **Arize Phoenix** for LLM/Agent monitoring.
+
+## Implementation Progress
+The project has been scaffolded based on detailed technical plans. Current foundational modules include:
+- **Frontend (`src/frontend`)**: Next.js core application with basic routes for onboarding and marketplace.
+- **Backend Microservices (`src/backend`)**: Scaffolding for Go (Gateway), Rust (Safety), Python (Research), and QASM (Quantum).
+- **Security (`src/security`)**: Zero-Knowledge Proof stubs, including Noir circuits for age verification.
+- **Commerce (`src/commerce`)**: Supabase SQL migrations with strict RLS and UCP checkout stubs.
 
 ## Getting Started
 
