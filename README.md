@@ -8,7 +8,7 @@ This platform serves as a secure bridge between wellness providers and consumers
 
 ## Project Structure & Tech Stack
 
-### Frontend
+### Frontend :
 
 - **Framework**: [Next.js](https://nextjs.org/) (TypeScript)
 - **State Management**: React Context / TanStack Query
@@ -28,19 +28,23 @@ This platform serves as a secure bridge between wellness providers and consumers
 - **Security**: Post-Quantum Cryptography (**PQC Libraries**) and **Cilium Tetragon** for runtime security.
 
 ### Tools & Protocols
+
 - **Commerce**: **Google Universal Commerce Protocol (UCP)** for interoperable marketplace logic.
 - **Observability**: **OpenTelemetry** and **Arize Phoenix** for LLM/Agent monitoring.
 
 ## Implementation Progress
+
 The project has been scaffolded based on detailed technical plans and expanded via token-optimized parallel execution.
 
 ### Completed Foundations
+
 - **Frontend (`src/frontend`)**: Next.js core application plus runnable App Router root files (`layout.tsx`, root `page.tsx`, `tsconfig.json`, `next-env.d.ts`, `next.config.mjs`) and feature routes for onboarding, marketplace, and education.
 - **Backend Microservices (`src/backend`)**: Scaffolding for Go (Gateway), Rust (Safety), Python (Research), and QASM (Quantum).
 - **Security (`src/security`)**: Zero-Knowledge Proof stubs, including Noir circuit and RISC Zero crate-level scaffolding.
 - **Commerce (`src/commerce`)**: Supabase SQL migrations with strict RLS and Google UCP checkout stub.
 
 ### Parallel Implementation Plans Added
+
 - `docs/dev-docs/implementation-plan-runnable-foundation.md`
 - `docs/dev-docs/implementation-plan-ci-smoke-checks.md`
 - `docs/dev-docs/implementation-plan-tools-operationalization.md`
@@ -48,6 +52,7 @@ The project has been scaffolded based on detailed technical plans and expanded v
 - `docs/dev-docs/tools-module-mapping.md`
 
 ### Quality Gates
+
 - Lightweight CI quality gates are active in `.github/workflows/ci.yml`.
 - Token-efficient smoke checks are available under `tests/smoke/*.sh` and validate frontend/backend/security/commerce/docs scaffolds without heavy dependency installation.
 
