@@ -1,25 +1,26 @@
 export default function OnboardingPage() {
   return (
     <main className="panel page">
+      <span className="eyebrow">Step 01</span>
       <h1>Anonymous Onboarding</h1>
       <p>
-        Create a private profile using proof-oriented identity linking. This onboarding flow is designed to separate
-        personal identity from preference-level commerce interactions.
+        Begin with a discreet intake experience that protects identity while capturing preferences for tasteful,
+        consent-based recommendations.
       </p>
 
       <section className="feature-list" aria-label="Onboarding capabilities">
         <div className="feature-item">
-          <strong>ZK Identity Link:</strong> Bind a private credential without leaking source attributes.
+          <strong>Identity Boundary:</strong> Proof-based verification without exposing unnecessary personal data.
         </div>
         <div className="feature-item">
-          <strong>Preference Vaulting:</strong> Encrypt preference metadata for controlled downstream access.
+          <strong>Desire Mapping:</strong> Structured preference capture for intimate but safe personalization.
         </div>
         <div className="feature-item">
-          <strong>Policy Checkpoint:</strong> Gate onboarding completion through compliance-safe policy rules.
+          <strong>Access Tiering:</strong> Gradual unlock model for services and education pathways.
         </div>
       </section>
 
-      <p className="status">Scaffold state: ready for API contract wiring.</p>
+      <p className="status">Ready for credential API integration.</p>
     </main>
   );
 }

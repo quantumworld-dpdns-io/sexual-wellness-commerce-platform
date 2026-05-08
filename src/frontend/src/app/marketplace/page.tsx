@@ -1,25 +1,26 @@
 export default function MarketplacePage() {
   return (
     <main className="panel page">
-      <h1>Wellness Marketplace</h1>
+      <span className="eyebrow">Step 02</span>
+      <h1>Curated Marketplace</h1>
       <p>
-        Discover curated offerings through prescription-like filtering, privacy-preserving identity gates, and secure
-        checkout orchestration aligned with your commerce protocol.
+        Explore premium wellness products and intimacy-focused experiences within a refined, privacy-preserving
+        storefront.
       </p>
 
       <section className="feature-list" aria-label="Marketplace capabilities">
         <div className="feature-item">
-          <strong>Smart Discovery:</strong> Segment products by credential tier and guidance model.
+          <strong>Curated Catalogs:</strong> Sensual wellness selections filtered by verified preference profile.
         </div>
         <div className="feature-item">
-          <strong>Secure Checkout:</strong> Route transactions through UCP-compatible flows.
+          <strong>Discreet Checkout:</strong> UCP-aligned transactions with strict policy and compliance checks.
         </div>
         <div className="feature-item">
-          <strong>Traceable Fulfillment:</strong> Prepare auditable events for downstream service pipelines.
+          <strong>Aftercare Fulfillment:</strong> Packaging and delivery flows designed for complete discretion.
         </div>
       </section>
 
-      <p className="status">Scaffold state: ready for product API and cart integration.</p>
+      <p className="status">Ready for product and checkout API integration.</p>
     </main>
   );
 }

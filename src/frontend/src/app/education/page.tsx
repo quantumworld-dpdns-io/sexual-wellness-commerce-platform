@@ -1,25 +1,25 @@
 export default function EducationPage() {
   return (
     <main className="panel page">
-      <h1>Education Portal</h1>
+      <span className="eyebrow">Step 03</span>
+      <h1>Education & Intimacy Guidance</h1>
       <p>
-        Access guided education experiences tied to verified private credentials, so content depth and safety guidance
-        adapt to each validated user context.
+        Access elegant, medically respectful, and intimacy-positive content tailored to your private credential tier.
       </p>
 
       <section className="feature-list" aria-label="Education capabilities">
         <div className="feature-item">
-          <strong>Tiered Content:</strong> Progressive learning tracks unlocked by policy-compliant credentials.
+          <strong>Erotic Literacy:</strong> Legal, consent-first education around pleasure and communication.
         </div>
         <div className="feature-item">
-          <strong>Safety Advisory:</strong> Attach risk and compatibility notices before sensitive recommendations.
+          <strong>Body-Safe Learning:</strong> Safety advisories integrated before sensitive recommendations.
         </div>
         <div className="feature-item">
-          <strong>Continuity State:</strong> Maintain session-safe progress across education and marketplace modules.
+          <strong>Private Progress:</strong> Keep learning milestones without leaking identity-level data.
         </div>
       </section>
 
-      <p className="status">Scaffold state: ready for content service integration.</p>
+      <p className="status">Ready for content service integration.</p>
     </main>
   );
 }
