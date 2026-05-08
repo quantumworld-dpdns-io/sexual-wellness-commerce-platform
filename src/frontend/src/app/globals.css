@@ -1,0 +1,309 @@
+:root {
+  --bg0: #070708;
+  --bg1: #100d0c;
+  --bg2: #20140f;
+  --gold: #c9a56a;
+  --gold-soft: #e7cd9f;
+  --ivory: #f8f1e8;
+  --smoke: #ccb9a0;
+  --line: rgba(231, 205, 159, 0.34);
+  --panel: rgba(20, 15, 13, 0.86);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--ivory);
+  background:
+    radial-gradient(circle at 14% 8%, rgba(143, 84, 38, 0.34), transparent 34%),
+    radial-gradient(circle at 82% 20%, rgba(103, 58, 28, 0.22), transparent 28%),
+    linear-gradient(155deg, var(--bg0), var(--bg1) 40%, var(--bg2));
+  font-family: "Avenir Next", "Segoe UI", "Helvetica Neue", sans-serif;
+  letter-spacing: 0.01em;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 36px 36px;
+  opacity: 0.32;
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  position: relative;
+  z-index: 1;
+  width: min(1160px, 92vw);
+  margin: 0 auto;
+  padding: 2.5rem 0 4rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+}
+
+.brand-mark {
+  width: 2.15rem;
+  height: 2.15rem;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 0.72rem;
+  color: var(--gold-soft);
+}
+
+.brand-word {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.topnav {
+  display: flex;
+  gap: 0.55rem;
+  flex-wrap: wrap;
+}
+
+.topnav a {
+  text-decoration: none;
+  border: 1px solid var(--line);
+  color: var(--smoke);
+  padding: 0.43rem 0.88rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.topnav a:hover {
+  color: var(--gold-soft);
+  border-color: var(--gold);
+}
+
+.panel {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--panel);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.35);
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.24fr 0.76fr;
+  gap: 1.3rem;
+  margin-top: 1.45rem;
+}
+
+.hero-main {
+  padding: clamp(1.5rem, 4.4vw, 2.8rem);
+}
+
+.hero-club {
+  position: relative;
+}
+
+.hero-club .hero-main {
+  background:
+    linear-gradient(110deg, rgba(0, 0, 0, 0.34), rgba(88, 50, 24, 0.08)),
+    radial-gradient(circle at 18% 18%, rgba(207, 152, 86, 0.11), transparent 34%);
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--smoke);
+  font-size: 0.76rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.title {
+  margin: 0.76rem 0 1rem;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(2.2rem, 6.2vw, 4.9rem);
+  line-height: 0.91;
+}
+
+.subtitle {
+  margin: 0;
+  color: #eadcc8;
+  max-width: 40ch;
+  line-height: 1.67;
+}
+
+.actions {
+  margin-top: 1.6rem;
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  text-decoration: none;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  padding: 0.64rem 1.05rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background: linear-gradient(124deg, #a77742, #d3b079, #f0d5a3);
+  color: #26170c;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+.btn-secondary {
+  color: var(--smoke);
+}
+
+.hero-side {
+  padding: 1.2rem;
+}
+
+.stat-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.stat {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.stat h3 {
+  margin: 0;
+  color: var(--smoke);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+}
+
+.stat p {
+  margin: 0.45rem 0 0;
+  line-height: 1.45;
+}
+
+.split-section {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.3rem;
+}
+
+.page {
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.page h1,
+.page h2 {
+  margin: 0;
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  font-size: clamp(1.8rem, 4vw, 2.9rem);
+}
+
+.page h3 {
+  margin: 0;
+  color: var(--gold-soft);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.page p {
+  color: var(--smoke);
+  line-height: 1.7;
+  max-width: 66ch;
+}
+
+.feature-list {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.72rem;
+}
+
+.feature-item,
+.feature-link {
+  display: block;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.88rem 1rem;
+  background: rgba(255, 255, 255, 0.015);
+  text-decoration: none;
+}
+
+.feature-item strong {
+  color: var(--gold-soft);
+}
+
+.feature-link:hover {
+  border-color: var(--gold);
+  color: var(--gold-soft);
+}
+
+.bullet-list {
+  margin: 1rem 0 0;
+  padding-left: 1.1rem;
+  color: var(--smoke);
+  line-height: 1.7;
+}
+
+.contact-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.status {
+  margin-top: 1.2rem;
+  color: #98d8b4;
+  font-size: 0.84rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 980px) {
+  .hero,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

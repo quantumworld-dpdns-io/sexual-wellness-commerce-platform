@@ -7,9 +7,65 @@ on:
     branches: [main]
 
 jobs:
-  build:
+  quality-gates:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Placeholder build step
-        run: echo "Add your build/test commands here"
+
+      - name: Verify required scaffold files exist
+        run: |
+          set -eu
+          required_files="
+          src/frontend/package.json
+          src/frontend/src/app/onboarding/page.tsx
+          src/frontend/src/app/marketplace/page.tsx
+          src/frontend/src/app/education/page.tsx
+          src/backend/gateway/main.go
+          src/backend/gateway/go.mod
+          src/backend/safety/Cargo.toml
+          src/backend/safety/src/main.rs
+          src/backend/research/main.py
+          src/backend/quantum/main.py
+          src/security/noir/age_verification/src/main.nr
+          src/security/risc0/stub.rs
+          src/commerce/ucp/checkout.ts
+          "
+          for f in $required_files; do
+            [ -f "$f" ] || { echo "missing required file: $f"; exit 1; }
+          done
+
+      - name: Verify SQL migration exists
+        run: |
+          set -eu
+          migration="src/commerce/supabase/migrations/01_initial_schema.sql"
+          [ -f "$migration" ] || { echo "missing migration: $migration"; exit 1; }
+          grep -qi 'create table' "$migration" || {
+            echo "migration exists but appears incomplete: $migration"
+            exit 1
+          }
+
+      - name: Verify markdown/docs exist
+        run: |
+          set -eu
+          required_docs="
+          README.md
+          docs/dev-docs/progress.md
+          docs/dev-docs/frontend.md
+          docs/dev-docs/backend-microservices.md
+          docs/dev-docs/security-zkp.md
+          docs/dev-docs/commerce-supabase.md
+          docs/dev-docs/architecture.md
+          "
+          for f in $required_docs; do
+            [ -f "$f" ] || { echo "missing required doc: $f"; exit 1; }
+          done
+
+      - name: Run smoke tests
+        run: |
+          set -eu
+          chmod +x tests/smoke/*.sh
+          tests/smoke/frontend_smoke.sh
+          tests/smoke/backend_smoke.sh
+          tests/smoke/security_smoke.sh
+          tests/smoke/commerce_smoke.sh
+          tests/smoke/docs_smoke.sh

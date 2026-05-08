@@ -1,0 +1,10 @@
+[package]
+name = "risc0_scaffold"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "stub.rs"
+
+[dependencies]
+risc0-zkvm = "0.20"
