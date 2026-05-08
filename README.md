@@ -1,10 +1,36 @@
 # sexual-wellness-commerce-platform
 
-> Sexual wellness prescription-like commerce platform – marketplace for health/education using private preference credentials
+> **Sexual Wellness Prescription-Like Commerce Platform**: A specialized marketplace for health and education utilizing private preference credentials and advanced safety modules to ensure user anonymity and data integrity.
 
 ## Overview
 
-This repository is part of the [quantumworld-dpdns-io](https://github.com/quantumworld-dpdns-io) Wild SaaS & Tech Development initiative.
+This platform serves as a secure bridge between wellness providers and consumers, focusing on "prescription-like" precision in commerce. It leverages cutting-edge technologies including Zero-Knowledge Proofs (ZKP) and Quantum Computing to handle sensitive preference data.
+
+## Project Structure & Tech Stack
+
+### Frontend
+
+- **Framework**: [Next.js](https://nextjs.org/) (TypeScript)
+- **State Management**: React Context / TanStack Query
+- **Styling**: Vanilla CSS / Tailwind CSS
+
+### Backend (Microservices Architecture)
+
+- **Go**: High-performance core services and API gateway.
+- **Rust**: Safety-critical modules and Wasm-based execution using **Fermyon Spin** and **Wasmtime**.
+- **Python**: AI/ML research panels and orchestration using **LangGraph** & **CrewAI**.
+- **Quantum**: Quantum-resistant algorithms and circuit simulation using **Qiskit** and **NVIDIA CUDA-Q** (QASM).
+
+### Data & Security
+
+- **Primary Database**: [Supabase](https://supabase.com/) (PostgreSQL + Auth + Storage)
+- **Private Credentials**: **Zero-Knowledge Proofs** implemented via **Noir** and **RISC Zero**.
+- **Security**: Post-Quantum Cryptography (**PQC Libraries**) and **Cilium Tetragon** for runtime security.
+
+### Tools & Protocols
+
+- **Commerce**: **Google Universal Commerce Protocol (UCP)** for interoperable marketplace logic.
+- **Observability**: **OpenTelemetry** and **Arize Phoenix** for LLM/Agent monitoring.
 
 ## Getting Started
 
@@ -14,7 +40,7 @@ git clone https://github.com/quantumworld-dpdns-io/sexual-wellness-commerce-plat
 cd sexual-wellness-commerce-platform
 ```
 
-## Project Structure
+## Project Layout
 
 ```
 .
