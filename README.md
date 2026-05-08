@@ -1,6 +1,9 @@
+
 # sexual-wellness-commerce-platform
 
 > **Sexual Wellness Prescription-Like Commerce Platform**: A specialized marketplace for health and education utilizing private preference credentials and advanced safety modules to ensure user anonymity and data integrity.
+> 
+<img width="910" height="844" alt="Screenshot 2026-05-08 at 11 33 05 PM" src="https://github.com/user-attachments/assets/3854648a-2eee-46e4-9fac-d39c5fa52465" />
 
 ## Overview
 
