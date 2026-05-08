@@ -1,10 +1,10 @@
 [package]
-name = "safety"
+name = "risc0_scaffold"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+path = "stub.rs"
+
 [dependencies]
-spin-sdk = "3.0"
-noir_rs = "0.1"
 risc0-zkvm = "0.20"
-anyhow = "1"
