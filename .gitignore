@@ -26,3 +26,4 @@ vendor/
 /software
 /src/frontend/.next/cache
 /src/frontend/.next
+scripts/auto_commit.sh
